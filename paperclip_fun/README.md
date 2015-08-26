@@ -50,7 +50,7 @@ end
 --> Note that we can add default CSS styles/properties to the class object
 
 ##Edit and New Views
-```html
+```ruby
 <%= form_for @post, html: { multipart: true } do |form| %>
 	<%= form.file_field :image %>
 <% end %>
