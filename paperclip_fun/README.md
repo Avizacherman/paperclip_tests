@@ -50,7 +50,7 @@ end
 --> Note that we can add default CSS styles/properties to the class object
 
 ##Edit and New Views
-```
+```html
 <%= form_for @post, html: { multipart: true } do |form| %>
 	<%= form.file_field :image %>
 <% end %>
@@ -66,7 +66,7 @@ end
 
 NOTE: Starting at version 4.0.0, all attachments are required to include a content_type validation, a file_name validation, or to explicitly state that they're not going to have either. Paperclip will raise an error if you do not do this.
 
-```
+```ruby
 class ActiveRecord::Base
 	has_attached_file :avatar
 	# Validate content type
