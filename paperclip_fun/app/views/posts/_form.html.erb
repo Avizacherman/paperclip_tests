@@ -30,4 +30,10 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+<% end %>
+
+<% form_for @post, url: {action: 'remove_image'}, method: 'post' do |f| %>
+  <%=f.submit "Delete Image" %>
 <% end %>

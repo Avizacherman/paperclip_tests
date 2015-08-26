@@ -18,7 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
-        <td><%= image_tag post.image.url %></td>
+        <td><%= image_tag post.image.url(:thumb) %></td>
         <td><%= post.author %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -29,5 +29,7 @@
 </table>
 
 <br>
+
+
 
 <%= link_to 'New Post', new_post_path %>
