@@ -63,16 +63,17 @@ end
 
 NOTE: Starting at version 4.0.0, all attachments are required to include a content_type validation, a file_name validation, or to explicitly state that they're not going to have either. Paperclip will raise an error if you do not do this.
 
+```
 class ActiveRecord::Base
-has_attached_file :avatar
-# Validate content type
-validates_attachment_content_type :avatar, content_type: /\Aimage/
-# Validate filename
-validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
-# Explicitly do not validate
-do_not_validate_attachment_file_type :avatar
+	has_attached_file :avatar
+	# Validate content type
+	validates_attachment_content_type :avatar, content_type: /\Aimage/
+	# Validate filename
+	validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
+	# Explicitly do not validate
+	do_not_validate_attachment_file_type :avatar
 end
-
+```
 
 ###Useful Links
 * [Video tutorial for setup](https://youtu.be/Z5W-Y3aROVE "link to youtube")
