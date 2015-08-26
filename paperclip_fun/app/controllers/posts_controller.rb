@@ -68,7 +68,7 @@ class PostsController < ApplicationController
     post_id = @post.id
     @post.image = nil;
     @post.save
-    redirect_to post_path(post_id)
+    redirect_to edit_post_path(post_id)
   end
 
 

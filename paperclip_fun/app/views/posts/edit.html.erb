@@ -2,8 +2,11 @@
 
 
 <%= render 'form' %>
+  
+  <strong>Image:</strong>
+<%= image_tag @post.image.url(:thumb) %>
+</p>
 
-<%=@post.id%>
 <%= form_for @post, url: {action: 'remove_image'}, method: 'post' do |f| %>
  	<%= f.hidden_field :id, :value => "#{@post.id}" %>
   <%=f.submit "Delete Image" %>
